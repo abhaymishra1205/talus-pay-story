@@ -86,11 +86,11 @@ export const PaymentForm = ({ onSubmit, isProcessing }: PaymentFormProps) => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-bg flex items-center justify-center p-4">
-      <Card className="w-full max-w-md shadow-card border-payment-border bg-payment-card">
+    <div className="min-h-screen bg-gradient-bg flex items-center justify-center p-4 animate-fade-in">
+      <Card className="w-full max-w-md shadow-card border-payment-border bg-gradient-card backdrop-blur-sm animate-scale-in">
         <CardHeader className="text-center space-y-4">
           <div className="flex justify-center">
-            <div className="p-3 bg-gradient-primary rounded-full">
+            <div className="p-3 bg-gradient-payment rounded-full shadow-glow animate-float">
               <CreditCard className="h-6 w-6 text-primary-foreground" />
             </div>
           </div>
@@ -283,7 +283,7 @@ export const PaymentForm = ({ onSubmit, isProcessing }: PaymentFormProps) => {
 
             <Button
               type="submit"
-              className="w-full bg-gradient-primary text-primary-foreground font-semibold py-3 shadow-payment hover:shadow-lg transition-smooth disabled:opacity-50"
+              className="w-full bg-gradient-payment text-primary-foreground font-semibold py-3 shadow-payment hover:shadow-glow transition-spring hover:scale-105 disabled:opacity-50 disabled:hover:scale-100 animate-glow-pulse"
               disabled={isProcessing}
             >
               {isProcessing ? (

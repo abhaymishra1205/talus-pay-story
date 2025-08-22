@@ -56,13 +56,13 @@ export const AdminView = ({ onReset }: AdminViewProps) => {
   const excessAmount = capturedAmount > originalAmount ? capturedAmount - originalAmount : 0;
 
   return (
-    <div className="min-h-screen bg-gradient-bg p-4">
+    <div className="min-h-screen bg-gradient-bg p-4 animate-fade-in">
       <div className="max-w-4xl mx-auto space-y-6">
         {/* Header */}
-        <Card className="shadow-card border-payment-border bg-payment-card">
+        <Card className="shadow-card border-payment-border bg-gradient-card animate-slide-in-right">
           <CardHeader>
             <CardTitle className="flex items-center gap-3 text-payment-text">
-              <div className="p-2 bg-gradient-primary rounded-lg">
+              <div className="p-2 bg-gradient-payment rounded-lg animate-float">
                 <Settings className="h-5 w-5 text-primary-foreground" />
               </div>
               Talus Payment Admin Dashboard
@@ -72,35 +72,35 @@ export const AdminView = ({ onReset }: AdminViewProps) => {
 
         {/* Transaction Status */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <Card className="shadow-card border-payment-border bg-payment-card">
+          <Card className="shadow-card border-payment-border bg-gradient-card hover:shadow-glow transition-spring hover:scale-105">
             <CardContent className="p-6">
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-sm text-payment-muted">Transaction Status</p>
                   <p className="text-2xl font-bold text-payment-text">Authorized</p>
                 </div>
-                <div className="p-3 bg-gradient-primary rounded-full">
+                <div className="p-3 bg-gradient-payment rounded-full animate-glow-pulse">
                   <CreditCard className="h-6 w-6 text-primary-foreground" />
                 </div>
               </div>
             </CardContent>
           </Card>
 
-          <Card className="shadow-card border-payment-border bg-payment-card">
+          <Card className="shadow-card border-payment-border bg-gradient-card hover:shadow-glow transition-spring hover:scale-105">
             <CardContent className="p-6">
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-sm text-payment-muted">Original Amount</p>
                   <p className="text-2xl font-bold text-payment-text">${(originalAmount / 100).toFixed(2)}</p>
                 </div>
-                <div className="p-3 bg-accent rounded-full">
+                <div className="p-3 bg-accent rounded-full animate-float">
                   <DollarSign className="h-6 w-6 text-accent-foreground" />
                 </div>
               </div>
             </CardContent>
           </Card>
 
-          <Card className="shadow-card border-payment-border bg-payment-card">
+          <Card className="shadow-card border-payment-border bg-gradient-card hover:shadow-glow transition-spring hover:scale-105">
             <CardContent className="p-6">
               <div className="flex items-center justify-between">
                 <div>

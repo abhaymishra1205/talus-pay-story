@@ -25,13 +25,13 @@ export const SuccessScreen = ({ onComplete }: SuccessScreenProps) => {
   }, [onComplete]);
 
   return (
-    <div className="min-h-screen bg-gradient-bg flex items-center justify-center p-4">
-      <Card className="w-full max-w-md shadow-success border-0 bg-payment-card">
+    <div className="min-h-screen bg-gradient-bg flex items-center justify-center p-4 animate-fade-in">
+      <Card className="w-full max-w-md shadow-success border-0 bg-gradient-card animate-scale-in">
         <CardContent className="text-center p-8 space-y-6">
           <div className="flex justify-center">
-            <div className="relative">
+            <div className="relative animate-float">
               <div className="absolute inset-0 bg-gradient-success rounded-full animate-pulse shadow-success"></div>
-              <div className="relative p-4 bg-gradient-success rounded-full">
+              <div className="relative p-4 bg-gradient-success rounded-full animate-glow-pulse">
                 <CheckCircle className="h-12 w-12 text-success-foreground" />
               </div>
             </div>

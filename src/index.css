@@ -8,7 +8,7 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 248 250 252;
+    --background: 220 13% 97%;
     --foreground: 215 28% 17%;
 
     --card: 0 0% 100%;
@@ -24,10 +24,10 @@ All colors MUST be HSL.
     --secondary: 215 28% 17%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 248 250 252;
-    --muted-foreground: 148 163% 184%;
+    --muted: 220 13% 95%;
+    --muted-foreground: 215 16% 47%;
 
-    --accent: 34 100% 92%;
+    --accent: 34 57% 92%;
     --accent-foreground: 217 91% 60%;
 
     --success: 142 76% 36%;
@@ -36,31 +36,35 @@ All colors MUST be HSL.
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 215 14% 89%;
+    --border: 220 13% 91%;
     --input: 0 0% 100%;
     --ring: 217 91% 60%;
 
     /* Payment specific colors */
-    --payment-bg: 248 250 252;
+    --payment-bg: 220 13% 97%;
     --payment-card: 0 0% 100%;
-    --payment-border: 215 14% 89%;
+    --payment-border: 220 13% 91%;
     --payment-input-bg: 0 0% 100%;
     --payment-text: 215 28% 17%;
-    --payment-muted: 148 163% 184%;
+    --payment-muted: 215 16% 47%;
     
     /* Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(217 91% 60%), hsl(217 91% 70%));
     --gradient-success: linear-gradient(135deg, hsl(142 76% 36%), hsl(142 76% 46%));
-    --gradient-bg: linear-gradient(180deg, hsl(248 250 252), hsl(241 245 249));
+    --gradient-bg: linear-gradient(135deg, hsl(220 13% 97%), hsl(217 33% 97%));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(220 13% 99%));
+    --gradient-payment: linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(228 91% 70%) 50%, hsl(245 91% 80%) 100%);
     
     /* Shadows */
-    --shadow-payment: 0 4px 6px -1px hsl(217 91% 60% / 0.1);
-    --shadow-card: 0 10px 25px -3px hsl(0 0% 0% / 0.1);
+    --shadow-payment: 0 8px 32px -8px hsl(217 91% 60% / 0.15);
+    --shadow-card: 0 20px 25px -5px hsl(0 0% 0% / 0.1), 0 10px 10px -5px hsl(0 0% 0% / 0.04);
     --shadow-success: 0 0 40px hsl(142 76% 36% / 0.3);
+    --shadow-glow: 0 0 60px hsl(217 91% 60% / 0.3);
     
     /* Animations */
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --transition-spring: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
     --radius: 0.5rem;
 
